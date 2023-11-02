@@ -27,7 +27,9 @@ public class Menu {
     }
 
     public void addDrink(Drink drink) {
-        drinks.add(drink);
+        List<Drink> drinksTmp = drinks;
+        drinksTmp.add(drink);
+        this.drinks = drinksTmp;
     }
 
     public void printMenu() {

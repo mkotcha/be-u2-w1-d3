@@ -29,6 +29,21 @@ public class BeansConfiguration {
     }
 
     @Bean
+    Drink getWater() {
+        return new Drink("water", 0.5, 1);
+    }
+
+    @Bean
+    Drink getCocaCola() {
+        return new Drink("Coca Cola", 0.33, 2.5);
+    }
+
+    @Bean
+    Drink getBeer() {
+        return new AlcoholicDrink("beer", 0.33, 3, 4.5);
+    }
+
+    @Bean
     @Primary
     Menu getMenu() {
 
