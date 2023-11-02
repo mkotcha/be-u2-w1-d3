@@ -13,7 +13,7 @@ public abstract class Consumation {
 
     @Override
     public String toString() {
-        return getProductName() + " ( " + getIngredients() + " ) " + " - " + getPrice() + " €\n";
+        return getProductName() + " ( " + getIngredients() + " ) " + " - " + getPrice() + " €";
     }
 
 }

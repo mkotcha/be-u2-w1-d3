@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -68,6 +69,14 @@ public class BeansConfiguration {
                 new AlcoholicDrink("beer", 0.33, 3, 4.5));
         List<ExtraAddictionDecorator> toppings = List.of(new ExtraSalameDecorator(pizza), new ExtraAnanasDecorator(pizza), new ExtraProsciuttoDecorator(pizza));
 
+        return new Menu(pizzas, drinks, toppings);
+    }
+
+    @Bean
+    Menu getEmptyMenu() {
+        List<Consumation> pizzas = new ArrayList<>();
+        List<Drink> drinks = new ArrayList<>();
+        List<ExtraAddictionDecorator> toppings = new ArrayList<>();
         return new Menu(pizzas, drinks, toppings);
     }
 }

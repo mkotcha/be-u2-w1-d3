@@ -12,6 +12,6 @@ public class AlcoholicDrink extends Drink {
     @Override
     public String toString() {
         return productName + " ( " + capacity + ", " + volume + "% ) " +
-                " - " + String.format("%.2f", price) + "€\n";
+                " - " + String.format("%.2f", price) + "€";
     }
 }

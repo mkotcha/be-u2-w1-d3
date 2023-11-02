@@ -34,6 +34,6 @@ public class ExtraSalameDecorator extends ExtraAddictionDecorator {
 
     @Override
     public void singlePrint() {
-        System.out.println(getSingleIngredient() + " - 1,50€\n");
+        System.out.println(getSingleIngredient() + " - 1,50€");
     }
 }

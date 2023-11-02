@@ -37,6 +37,7 @@ public class Order {
     }
 
     public void printOrder() {
+        System.out.println();
         System.out.println("Order number: " + orderNumber);
         System.out.println("Table number: " + table.getTableNumber());
         System.out.println("Seats: " + seats + " / " + table.getSeats());
@@ -44,7 +45,9 @@ public class Order {
         System.out.println("Order state: " + orderState);
         System.out.println();
         menu.getPizzas().forEach(System.out::println);
+        System.out.println();
         menu.getDrinks().forEach(System.out::println);
+        System.out.println();
         System.out.println("Order price: " + getPrice());
         System.out.println();
     }

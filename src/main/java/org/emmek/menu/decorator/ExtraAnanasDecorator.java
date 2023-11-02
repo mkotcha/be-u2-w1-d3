@@ -34,6 +34,6 @@ public class ExtraAnanasDecorator extends ExtraAddictionDecorator {
     }
 
     public void singlePrint() {
-        System.out.println(getSingleIngredient() + " - 2,00€\n");
+        System.out.println(getSingleIngredient() + " - 2,00€");
     }
 }

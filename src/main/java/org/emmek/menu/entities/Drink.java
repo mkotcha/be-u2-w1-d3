@@ -17,7 +17,7 @@ public class Drink {
     @Override
     public String toString() {
         return productName + " ( " + capacity + " ) " +
-                " - " + String.format("%.2f", price) + "€\n";
+                " - " + String.format("%.2f", price) + "€";
     }
 
 }

@@ -30,7 +30,7 @@ public class ExtraProsciuttoDecorator extends ExtraAddictionDecorator {
 
     @Override
     public void singlePrint() {
-        System.out.println(getSingleIngredient() + " - 1,00€\n");
+        System.out.println(getSingleIngredient() + " - 1,00€");
     }
 
     public double getPrice() {

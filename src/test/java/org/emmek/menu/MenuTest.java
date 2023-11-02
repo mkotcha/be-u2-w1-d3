@@ -45,9 +45,10 @@ public class MenuTest {
     @Test
     void tesDrinkMenuGetPrice() {
         Drink water = ctx.getBean("getWater", Drink.class);
+        Drink beer = ctx.getBean("getBeer", Drink.class);
         menu.addDrink(water);
-        menu.addDrink(water);
+        menu.addDrink(beer);
         double price = menu.getPrice();
-        assertEquals(2, price);
+        assertEquals(4, price);
     }
 }
