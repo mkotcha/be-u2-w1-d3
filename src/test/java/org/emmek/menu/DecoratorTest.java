@@ -54,5 +54,13 @@ public class DecoratorTest {
         assertEquals(6.5, priceSalami);
     }
 
+    @Test
+    void testExtraIngredient() {
+        pizza = new ExtraProsciuttoDecorator(pizza);
+        pizza = new ExtraAnanasDecorator(pizza);
+        pizza = new ExtraSalameDecorator(pizza);
+        assertEquals("pomodoro, mozzarella, prosciutto, ananas, salame", pizza.getIngredients());
+    }
+
 
 }
