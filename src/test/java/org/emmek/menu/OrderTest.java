@@ -3,6 +3,7 @@ package org.emmek.menu;
 import lombok.extern.slf4j.Slf4j;
 import org.emmek.menu.entities.Menu;
 import org.emmek.menu.entities.Order;
+import org.emmek.menu.entities.Table;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,14 +29,16 @@ class OrderTest {
         order = ctx.getBean(Order.class);
         Menu menu = ctx.getBean("getEmptyMenu", Menu.class);
         order.setMenu(menu);
+        Table table = ctx.getBean("getTable", Table.class);
+        order.setTable(table);
     }
 
 
     @Test
     void emptyOrder() {
         double price = order.getPrice();
-
-        assertEquals(0, price);
+        double expected = order.getSeats() * 2;
+        assertEquals(expected, price);
     }
 
 }
