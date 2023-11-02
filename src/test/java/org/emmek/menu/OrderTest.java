@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @Slf4j
@@ -24,6 +25,13 @@ class OrderTest {
         ctx = new AnnotationConfigApplicationContext(MenuApplication.class);
     }
 
+    @Test
+    void tableOverflow() {
+        Table table = ctx.getBean("getTable", Table.class);
+        order.setTable(table);
+        assertTrue(table.getSeats() >= order.getSeats());
+    }
+
     @BeforeEach
     void beforeEach() {
         order = ctx.getBean(Order.class);
@@ -32,7 +40,6 @@ class OrderTest {
         Table table = ctx.getBean("getTable", Table.class);
         order.setTable(table);
     }
-
 
     @Test
     void emptyOrder() {
